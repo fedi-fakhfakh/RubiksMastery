@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Add some CSS for styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Position the navigation bar at the top of the page */
+    header {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+    /* Add some styling for the stopwatch and scores sections */
+    .stopwatch {
+      width: 50%;
+      margin: 50px auto 0;
+      text-align: center;
+    }
+
+    .stopwatch h2 {
+      margin-bottom: 20px;
+    }
+
+    .time {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    aside {
+      width: 30%;
+      margin: 50px auto 0;
+      text-align: center;
+    }
+
+    aside h2 {
+      margin-bottom: 20px;
+    }
+    .stopwatch{
+      margin-top:70px;
+    }
+  </style>
+  <title>Stopwatch</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="about us.html">About Us</a>
+      <a href="index.html">Learning</a>
+      <a href="stopwatch4.html">Stopwatch</a>
+      <a href="test.html">Test</a>
+    </nav>
+  </header>
+  <div class="stopwatch">
+    <div class="scramble">
+      <h2>Scramble</h2>
+      <div class="scramble-string"></div>
+    </div>
+    <div class="time">00:00:00</div>
+    <button id="start-stop-btn">Start/Stop</button>
+  </div>
+  <aside>
+    <h2>Scores</h2>
+    <p>Last Score: <span id="last-score"></span></p>
+    <p>Best Score: <span id="best-score"></span></p>
+  </aside>
+  <script>
+      
+    let interval;
+    let elapsedTime = 0;
+    let started = false;
+    let timer;
+    let reset = false;
+    let counting;
+    let counter=0;
+    function startStopwatch() {
+      if (!started) {
+        interval = setInterval(() => {
+          elapsedTime++;
+          updateTime();
+        }, 10);
+        started = true;
+      }
+    }
+  
+    function stopStopwatch() {
+      if (started) {
+        clearInterval(interval);
+        started = false;
+      }
+    }
+  
+    function resetStopwatch() {
+      stopStopwatch();
+      elapsedTime = 00;
+      updateTime();
+    }
+  
+    function updateTime() {
+      let minutes = Math.floor(elapsedTime / 6000);
+      let seconds = Math.floor(elapsedTime / 100) % 60;
+      let milliseconds = elapsedTime % 100;
+      
+          if(minutes < 10){
+            minutes=`0${minutes}`
+          }
+          if(seconds < 10){
+            seconds=`0${seconds}`
+          }
+          if(milliseconds < 10){
+            milliseconds=`0${milliseconds}`
+          }
+        
+      
+      
+      document.querySelector('.time').innerHTML = `${minutes}:${seconds}:${milliseconds}`;
+      }
+    
+  
+    // Detect space key press and release on computers
+document.addEventListener('keyup', (event) => {
+  if (event.code === 'Space') {
+    if(!started){
+      elapsedTime = 00;
+      updateTime();
+      startStopwatch();
+    }
+    else{
+      stopStopwatch();
+    }
+  }
+});
+
+const button = document.getElementById("start-stop-btn");
+  console.log(button)
+button.addEventListener("touchend", () => {
+  console.log('fayzakjns')
+  if (!started) {
+    elapsedTime = 00;
+    updateTime();
+    startStopwatch();
+  } else {
+    stopStopwatch();
+  }
+});
+let lastScore;
+let bestScore = 0;
+
+function updateScores() {
+
+lastScore = elapsedTime;
+bestScore = Math.max(bestScore, lastScore);
+let minutes = Math.floor(lastScore / 6000);
+      let seconds = Math.floor(lastScore / 100) % 60;
+      let milliseconds = lastScore % 100;
+      let minutesb = Math.floor(bestScore / 6000);
+      let secondsb = Math.floor(bestScore / 100) % 60;
+      let millisecondsb = bestScore % 100;
+
+      if(minutes < 10){
+        minutes=`0${minutes}`
+      }
+      if(seconds < 10){
+        seconds=`0${seconds}`
+      }
+      if(milliseconds < 10){
+        milliseconds=`0${milliseconds}`
+      }
+      if(minutesb < 10){
+        minutesb=`0${minutesb}`
+      }
+      if(secondsb < 10){
+        secondsb=`0${secondsb}`
+      }
+      if(millisecondsb < 10){
+        millisecondsb=`0${millisecondsb}`
+      }
+document.getElementById("last-score").textContent =`${minutes}:${seconds}:${milliseconds}`;
+document.getElementById("best-score").textContent =`${minutesb}:${secondsb}:${millisecondsb}`;
+}
+
+// Update scores when the stopwatch is stopped or reset
+stopStopwatch = function() {
+if (started) {
+  clearInterval(interval);
+  started = false;
+  updateScores();
+scrambleString.textContent = generateScramble();
+}
+}
+
+resetStopwatch = function() {
+stopStopwatch();
+elapsedTime = 00;
+updateTime();
+}
+function generateScramble() {
+  const moves = ['U', 'D', "F", "B", "L", "R"];
+  const directions = ["", "'", "2"];
+  let scramble = "";
+
+  for (let i = 0; i < 20; i++) {
+    scramble += `${moves[Math.floor(Math.random() * 6)]}${directions[Math.floor(Math.random() * 3)]} `;
+  }
+
+  return scramble;
+}
+
+// Display the scramble string
+const scrambleString = document.querySelector('.scramble-string');
+
+scrambleString.textContent = generateScramble();
+  </script>
+</body>
+</html>
