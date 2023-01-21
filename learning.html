@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      /* Add some CSS for styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      /* Position the navigation bar at the top of the page */
+      header {
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        height: 50px;
+        margin-bottom: 30px;
+      }
+      header a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      /* Center the main content on the page */
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin: 50px auto 0;
+      }
+      .main-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 30px;
+        min-height: calc(100vh - 200px);
+        position: relative;
+      }
+      .course {
+        width: 45%;
+        padding: 20px;
+        border: 1px solid gray;
+        margin-bottom: 20px;
+        align-self: center;
+      }
+      .course h2 {
+        margin: 10px 0;
+        font-size: 20px;
+      }
+      .course p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+      .course a.button {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        text-decoration: none;
+        margin-top: 10px;
+      }
+      /* Media query for devices with a screen width less than 600px */
+      @media screen and (max-width: 600px) {
+        .course {
+          width: 100%;
+          text-align: center;
+        }
+        .main-content {
+          flex-wrap: nowrap;
+          flex-direction: column;
+        }
+      }
+    </style>
+    <title>Learn to Solve the Rubik's Cube</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="about us.html">About Us</a>
+        <a href="learning.html">Learning</a>
+        <a href="stopwatch4.html">Stopwatch</a>
+        <a href="index.html">Test</a>
+      </nav>
+    </header>
+    <div class="container">
+      <!-- Add the main content -->
+      <div class="main-content">
+        <div class="course">
+          <h2>Beginner Course</h2>
+          <p>Learn the basic techniques for solving the Rubik's cube with our step-by-step guide. Our beginner course includes video tutorials and interactive quizzes to help you master the fundamentals.</p>
+          <p>Price: Free</p>
+          <a href="beginnercourse1.html" class="button">Get Started</a>
+        </div>
+        <div class="course">
+          <h2>Advanced Course</h2>
+          <p>Take your solving skills to the next level with our advanced course. Our comprehensive guide covers advanced techniques and strategies for faster and more efficient solving.</p>
+          <a href="AdvancedCourse.html" class="button">go to the advaced course</a>
+        </div>
+        </div>
+        </div>
+        </body>
+        </html>
