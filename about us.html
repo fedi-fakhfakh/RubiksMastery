@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        height: 50px;
+        margin-bottom: 30px;
+      }
+
+      header a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+      }
+
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      main {
+        display: flex;
+        margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 100px);
+        position: relative;
+      }
+
+      section {
+        align-self: center;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        height: 100%;
+        flex-wrap: wrap;
+      }
+
+      .lessons {
+        width: 20%;
+        border-right: 1px solid gray;
+        padding: 20px;
+        height: 100%;
+        overflow: scroll;
+        min-height: 100%;
+      }
+
+      .lessons h5 {
+        margin: 10px 0;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      .content {
+        width: 80%;
+        padding: 20px;
+        height: 70%;
+        overflow: auto;
+        min-height: 100%;
+      }
+
+      .content h3 {
+        margin: 10px 0;
+        font-size: 20px;
+      }
+
+      .content p {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .content img {
+        max-width: 100%;
+        max-height: 40%;
+      }
+
+      main button {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 14px;
+      }
+      
+      .content {
+        position: relative;
+      }
+
+      button {
+        position: absolute;
+        bottom: 0px;
+      }
+
+      #next {
+        right:10px;
+}
+#previous {
+    left: 10px;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .lessons {
+      width: 100%;
+      border-right: none;
+    }
+    .content {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header a {
+      font-size: 12px;
+    }
+    .lessons h5 {
+      font-size: 14px;
+    }
+    .content h3 {
+      font-size: 18px;
+    }
+    .content p {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 992px) {
+    main{
+      flex-wrap: wrap;
+    }
+  }
+</style>
+    <title>what is this about</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="about us.html">What is this about</a>
+        <a href="learning.html">Lessons</a>
+        <a href="stopwatch4.html">Stopwatch</a>
+        <a href="index.html">Virtual - cube</a>
+      </nav>
+    </header>
+    <main>
+      <h1>What is this about</h1>
+      <section>
+        <div class="about-us">
+          <p>Welcome to <b>rubiksmastery.com</b>, the ultimate resource for learning how to solve a 3x3 Rubik's cube like a pro! Whether you're a complete beginner or looking to improve your speed and proficiency, we have everything you need to master the cube.</p>
+          <p>Our beginner course is designed specifically for those new to the cube, with step-by-step videos that teach you the techniques and algorithms needed to solve the puzzle. After each video, you'll have the opportunity to practice what you've learned with our interactive virtual Rubik's cube, and access the specific algorithms used in the video. And for those who want to improve even more, we have a section that advices you what rubik's cube to buy as a beginner.</p>
+          <p>For advanced cubers, we have an advanced course that takes your solving skills to the next level. We provide you with tips and techniques to help you solve the cube faster and more efficiently, as well as advice on the best advanced cube to buy to take your solving to the next level. To access the advanced course, you can buy a pdf for it.</p>
+          <p>And for those who don't want to buy a cube, we have a virtual rubik's cube that you can use to practice your solving skills.</p>
+          <p>To make it easy for anyone searching for "cube" related content, we have optimized our website for search engines so that it will be easily found by anyone searching for "cube" related content, and make sure to use the keywords "Rubik's cube, cube solving, beginner course, advanced course, virtual cube, cube algorithms" throughout the website's content and meta tags.</p>
+          <p>Thank you for visiting <b>rubiksmastery.com</b>, and happy solving!</p>
+          <p>If you have any questions or feedback about our website, please feel free to contact us at <b>fakhfakhfedi007@gmail.com</b>.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
