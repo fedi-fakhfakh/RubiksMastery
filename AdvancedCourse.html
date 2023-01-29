@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://css.gg/menu.css' rel='stylesheet'>
+  <title>Advanced Course</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    header {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+    main {width: 100vw;
+      display: flex;
+      margin-top: 10px;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 100px);
+    }
+    .fayza{
+      position: absolute;
+      top: 0;
+      right: 30px;
+      display: none;
+    }
+    section {
+      align-self: center;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      height: 100%;
+      overflow: scroll;
+      position: relative;
+    }
+
+    .lessons {
+      width: 20%;
+      border-right: 1px solid gray;
+      padding: 20px;
+      height: 100%;
+      overflow: scroll;
+    }
+
+    .lessons h5 {
+      margin: 10px 0;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    .content {
+      width: 80%;
+      padding: 20px;
+      padding-bottom: 70px;
+      height: 100%;
+      overflow: auto;
+      width: 100%;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    .content h3 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .content p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .content img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .button {
+      position: absolute;
+      top: calc(100% - 40px);
+      right: 30px;
+    }
+    button{
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    footer {
+background-color: #333;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 50px;
+}
+
+footer p {
+margin: 0;
+font-size: 14px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  
+main {
+flex-wrap: wrap;
+}
+
+}
+@media (max-width: 768px) {
+header a {
+font-size: 12px;
+}
+section {
+width: 100%;
+}
+.lessons {
+width: 100%;
+order: 2;
+padding: 10px;
+}
+.content {
+width: 100%;
+order: 1;
+padding: 10px;
+padding-top: 100px;
+padding-bottom: 100px;
+}
+.lesson div{
+  flex-wrap: wrap;
+}
+}
+@media (max-width: 600px) {
+  .fayza{
+      position: absolute;
+      top:10px;
+      right: 0;
+      display: flex;
+      cursor: pointer;
+    }
+  header{
+    margin-bottom: 0;
+  }
+  main{
+    margin-top: 0;
+    position: relative;
+  }
+  .lessons{
+    position: absolute;
+    text-align: center;
+  top:0;
+  right: -110vw; /* Start the menu off-screen */
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1f1f1;
+  transition: right 0.5s ease-out;
+  display: none;
+  }
+  .show-menu{
+    right: 0;
+    display: block;
+  }
+}
+/* Responsive styles for mobile devices */
+@media (max-width: 480px) {
+body {
+font-size: 14px;
+}
+}
+/* Responsive styles for tablet devices  */
+@media (max-width: 992px) and (min-width: 768px) {
+body {
+font-size: 16px;
+}
+}
+
+/* Responsive styles for large screens */
+@media (min-width: 992px) {
+body {
+font-size: 18px;
+}
+
+}
+
+/* Responsive styles for extra large screens */
+@media (min-width: 1200px) {
+body {
+font-size: 20px;
+}
+}
+
+/* Responsive styles for retina screens */
+@media (min-resolution: 192dpi) and (min-width: 1200px) {
+body {
+font-size: 24px;
+}
+}
+</style>
+
+</head>
+<body>
+  <main>
+    <h1>Advanced Course</h1>
+    <section>
+      <div class="lessons">
+        <h5>Lesson 1</h5>
+        <h5>Lesson 2</h5>
+        <!-- Add more lessons here -->
+      </div>
+      <div class="content">
+        <!-- Add the content for each lesson here -->
+        <div class="lesson">
+            <h2>Lesson 1</h2>
+            <p>Investing in an advanced cube is crucial if you want to improve your solving skills. These cubes are designed for speed solving and are more durable. Don't waste your time and energy on a subpar cube, invest in a high-quality one.</p>
+            <div style="color: red;"><p>The options are currently unavailable. If you would like to inquire about it, please contact us at <b>fakhfakhfedi007@gmail.com</b>. Stay tuned for updates!!</p><a href="index.html">go solve the virtual cube</a></div>
+            <p>you will also need the right profissional equipments to be faster</p>
+            <div style="color: red;"><p>The options are currently unavailable. If you would like to inquire about it, please contact us at <b>fakhfakhfedi007@gmail.com</b>. Stay tuned for updates!!</p><a href="index.html">go solve the virtual cube</a></div>
+          </div>
+        <div class="lesson">
+            <h2>Lesson 2</h2>
+            <p>The PDF that teaches you how to be faster is a small investment for the knowledge it provides. It will help you fine-tune your skills and optimize your gear, making you a faster cuber. Don't miss this opportunity to take your skills to the next level.</p>
+            <div style="color: red;"><p>The Advanced Course PDF is currently unavailable. If you would like to inquire about it, please contact us at <b>fakhfakhfedi007@gmail.com</b>. Stay tuned for updates on its availability for purchase.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div class="fayza" style="align-items: center;">lessons<i class="gg-menu"></i></div>
+    
+  </main>
+  
+  <div class="button">
+    <button id="previous">Previous</button>
+  <button id="next">Next</button>
+  </div> 
+  <script>
+    const lessons = document.querySelectorAll('.lesson');
+   const lessonTitles = document.querySelectorAll('.lessons h5');
+   const nextButton = document.getElementById('next');
+   const previousButton = document.getElementById('previous');
+   
+   let currentLesson = 0;
+   
+   for (let i = 0; i < lessons.length; i++) {
+     if (i !== currentLesson) {
+       lessons[i].style.display = 'none';
+     }
+   }
+   
+   nextButton.addEventListener('click', function() {
+     lessons[currentLesson].style.display = 'none';
+     currentLesson++;
+     if (currentLesson >= lessons.length) {
+       currentLesson = 0;
+     }
+     lessons[currentLesson].style.display = 'block';
+   });
+   
+   previousButton.addEventListener('click', function() {
+     lessons[currentLesson].style.display = 'none';
+     currentLesson--;
+     if (currentLesson < 0) {
+       currentLesson = lessons.length - 1;
+     }
+     lessons[currentLesson].style.display = 'block';
+   });
+   
+   lessonTitles.forEach((title, index) => {
+     title.addEventListener('click', () => {
+       lessons[currentLesson].style.display = 'none';
+       currentLesson = index;
+       lessons[currentLesson].style.display = 'block';
+       
+       sideMenu.classList.toggle('show-menu');
+     });
+   });
+   const sideMenu = document.querySelector('.lessons');
+   console.log(sideMenu)
+        const menuButton = document.querySelector('.fayza');
+        console.log(menuButton)
+        menuButton.addEventListener('click', () => {
+          sideMenu.classList.toggle('show-menu');
+        });
+
+    </script>
+</body>
+</html>
